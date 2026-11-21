@@ -1,0 +1,11 @@
+映射编号,场景,对外推荐写法,映射目标或证面写法,适用产品,证据类型,来源,定稿人,定稿日期,关联术语编号,备注
+M-001,DBPrisma 互认证短文名单,Great DB,GreatSQL 开源数据库（互认证书证面）,DBPrisma,认证原件,02-证据/登记.csv;VER-DBP-004,李侠,2026/10/29,T-PROD-001,专题单页/A 类写 GreatSQL；短文/母版写 Great DB
+M-002,DBPrisma 对外标题,息壤数据库串行审计安全网关,证书软件名因证而异,DBPrisma,认证原件,对外口径 证书原文节,李侠,2026/10/19,T-PROD-001,麒麟证：DBPrisma数据库代理管理平台软件 V1.0；鲲鹏证：DBPrisma数据库串行网关 0.01568
+M-003,人大金仓互认证,人大金仓 / KingbaseES,证面：DBPrisma产品 ↔ KingbaseES 等,DBPrisma,认证原件,登记+C-JC202607013,李侠,2026/10/22,T-PROD-001,
+M-004,TiDB 联合方案,TiDB / 平凯星辰 TiDB V7.1,证面：DBPrisma软件 V0.0.1,DBPrisma,认证原件,登记+S992260702,李侠,2026/10/22,T-PROD-001,勿写成覆盖全部 TiDB 发行版
+M-005,南大通用互认证,南大通用 / GBase,证面：DBPrisma软件 ↔ GBase 8a MPP Cluster V9,DBPrisma,认证原件,登记+G-A20260711013,李侠,2026/10/22,T-PROD-001,
+M-006,潇湘简称,潇湘,XXDB,XXDB,口径,00-对外口径.md,李侠,2026/10/19,T-PROD-003,
+M-007,青丘简称,青丘,QQDB,QQDB,口径,00-对外口径.md,李侠,2026/10/19,T-PROD-004,
+M-008,旧称禁用→现行,赛卡数据库 / THECA 桌面级原生 AI 数据库引擎,TheCa：XRDB 图形化管理软件,TheCa,口径,文档里还能展开-TheCa,李侠,2026/10/19,T-PROD-005,7 月白皮书不作为现行产品定义
+M-009,软著表述,软件著作权,登记申请已受理（不得写已取得登记证）,DBPrisma+数据库产品线,受理凭证,02-证据 软著截屏,李侠,2026/10/19,T-PROD-001,人事薪资管理系统不出现在产品页
+M-010,G-Server 中英映射,G-Server,通用网络服务运行时（General Server Runtime）,G-Server,口径+术语,00-对外口径.md;T-TECH-003,李侠,2026/11/10,T-TECH-003,英文名为技术术语；不是商业产品对外销售名

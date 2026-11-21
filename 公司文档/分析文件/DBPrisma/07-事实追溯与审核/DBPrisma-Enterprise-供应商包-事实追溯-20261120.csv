@@ -1,0 +1,20 @@
+文案范围,主张,等级,来源,进正文,冲突与授权,备注
+供应商四份说明,产品全称「息壤数据库串行审计安全网关」；英文产品名 DBPrisma；本包对象为 DBPrisma Enterprise,B,00-对外口径.md 可以出现的名称及 DBPrisma 节第163行；S-PG-01,是,未授 U6,正文用全称。不写「串联安全网关」。不写证面软件名
+供应商四份说明,部署在现有数据库前。接入句为企业无需修改任何一行原有业务应用的代码、只需将数据库连接地址指向 DBPrisma、平台可完全接管客户端身份校验并实现应用层账号与数据库底层账号的物理隔离,B,00-对外口径.md DBPrisma 节第163行；S-PG-01,是,未授 U6,四份正文使用该接入句
+供应商四份说明,SQL 防火墙、访问控制、行为审计、数据路由,B,00-对外口径.md 第163行；S-PG-02,是,未授 U6,不写入 Standard 旧稿「无审计、无安全防护」
+供应商四份说明,两种代理：认证托管、透明透传,B,负责人本轮指定用词。手册对应 configuration-reference.md 第250–251行 scheme auth（认证代理）与 transparent（透明代理）,是,未授 U6,正文用认证托管、透明透传。不写「透明代理不解析 SQL」
+供应商四份说明,连接池；多路复用,A,连接池：configuration-reference.md warmup_db_connections（约第377行）。多路复用：DBPrisma-用户文档综合手册.md「连接代理层：多路复用客户端连接到后端连接池」（约第447行）,是,未授 U6,不写连接数或时延数字
+供应商四份说明,当前支持 MySQL 和 PostgreSQL，以及兼容这两类数据库的信创产品,B,00-对外口径.md 第165行,是,未授 U6,四份只写这一句。不写数据库大版本号
+产品说明；部署与 POC,信创替代句逐字使用口径第167行,B,00-对外口径.md 第167行,是,未授 U6,只出现在产品说明与部署与 POC。安全审计专项与功能清单不写该句，也不写近义改写
+供应商四份说明,五层名称：IP 访问控制（ip_allowlist / ip_denylist）；TLS 加密（客户端到网关，tls_termination）；认证与限速（代理用户与认证失败封禁）；连接配额（单 IP 连接数）；SQL 防火墙（预编译语句双阶段解析，黑白名单）,A,security-hardening-guide.md 第35–56行分层图；认证失败封禁约第204–212行；单 IP 连接数 max_connections_per_ip 约第226行；预编译两阶段全覆盖第345–353行；黑白名单 sql_firewall_mode 见 configuration-reference.md 第960行,是,未授 U6,正文按负责人指定写「双阶段」。手册原文是「两阶段全覆盖」。不写虚拟补丁、表级访问控制
+供应商四份说明,国密原文：铜锁（Tongsuo）、TLCP（GB/T 38636）、RFC 8998 国密 TLS 1.3、SM2/SM3/SM4；国际算法 TLS 与国密可以分段配置在客户端到网关、网关到数据库两侧,B,00-对外口径.md 第169行,是,未授 U6,写在 TLS 加密层。不把国密写成认证结论
+供应商四份说明,审计对接客户现有的安全信息与事件管理（SIEM）与安全运营中心（SOC）；导出格式 json（NDJSON）、cef、syslog,A,格式：configuration-reference.md 第1071行 audit_export_format。SIEM 一词见同文件第1070行「SIEM 友好」。SOC 为负责人指定的客户平台称呼，不是 DBPrisma 产品名,是,未授 U6,不把 SIEM、SOC 写成 DBPrisma 产品名。不另写其他导出格式
+供应商四份说明,SHA-256 哈希链，每行 prev_hash 与 line_hash；四维合规报告为运维效率、安全威胁、性能基准、合规审计,B,哈希：configuration-reference.md 第1073行；口径第171行。四维名称：口径第171行,是,未授 U6,2026-11-20 起口径允许写入。未授 U6
+产品说明,单条 SQL 的重组上限 max_reassemble_bytes 可配置到 1 GiB，默认 16 MiB；该项须重启后生效，且后端 max_allowed_packet 不得小于该值,A,configuration-reference.md 第110行、第137行；口径第173行。文档版本 r19（2026-07-13）,是,未授 U6,只在产品说明写这一句。其余三份不写 1 GiB
+供应商四份说明,部分配置可热重载；监听、安全策略、重组上限等须重启后生效。管理接口同时提供 HTTP 与 HTTPS，只读；Prometheus 抓取 GET /metrics,A,热重载范围：configuration-reference.md 第746–784行。security.* 须重启见第784行。max_reassemble_bytes 不可 reload 见第761行。Admin：第125行。口径第171行,是,未授 U6,不写安全项可以热重载。不写「大部分配置可热重载」
+供应商四份说明,配置预检与回滚,A,configuration-reference.md checkconfig 约第724行；rollback_on_reload_fail 第1086行；reload 失败则整次不变见第747行,是,未授 U6,回滚指热重载失败恢复备份，不表示安全策略可以热重载
+供应商四份说明,审计日志可在落盘前对 SQL 字面量做脱敏；慢查询进入审计,A,脱敏：security-hardening-guide.md 第531–541行 capture_redact_literals。慢查询：configuration-reference.md 第1064–1065行 slow_query_ms,是,未授 U6,不扩写成查询结果脱敏
+供应商四份说明,行为审计记录源 IP、身份、时间、SQL 和结果,C,沿用上一版供应商稿的审计字段表述；口径只写到「行为审计」（第163行）。本轮未在 audit_export 字段表逐项核对这五个名称,是,未授 U6；字段组合待与导出样例核对,正文保持上一版供应商可读句。不把该组合升为已逐字段证实
+供应商四份说明,读写分离；多后端写广播；熔断；新连接转到健康后端,A,读写分离：configuration-reference.md 第418行 mode read_write。写广播：第417行 dispatch。熔断：第1006行 circuit_breaker。新连接转移：第1138行 auto_failover，且不影响已建立会话,是,未授 U6,信创句中的「多路广播」按口径原文保留，不与 dispatch 合并成同一实现证明
+供应商四份说明,银河麒麟高级服务器操作系统、银河麒麟桌面操作系统适配认证；华为鲲鹏兼容性认证,B,00-对外口径.md 第163行及证书原文节第206–216行。本轮未打开证书 PDF,是,未授 U6,不写证面软件名与版本号
+供应商四份说明未写入项,QPS；延迟；客户案例；教育线；DevOps；竞品名；虚拟补丁；表级访问控制；等保结论；关基认证结论；软件著作权审批状态；数据库大版本号；「透明代理不解析 SQL」；互认证产品点名,禁写,2026-11-20 负责人指令及口径第175行备注,否,未授 U6,四份正文不写这些项

@@ -1,0 +1,26 @@
+术语,手册中的写法,出现位置,开发手册原词,术语xlsx是否有,对外术语csv是否有,建议对外叫法,待确认
+DBPrisma,DBPrisma（息壤数据库串行审计安全网关）,开篇,DBPrisma,是,是,建议，批准：息壤数据库串行审计安全网关,是
+DBPrisma Enterprise,标题使用 DBPrisma Enterprise；正文全称仍写息壤数据库串行审计安全网关,标题,开发手册标题为 DBPrisma；未见 Enterprise,否,否,建议，批准：标题可写 DBPrisma Enterprise；产品全称用息壤数据库串行审计安全网关,是
+方案A（认证托管）,认证托管；配置键 scheme 取值 auth,配置：conf.json 与 proxy_users.json,方案 A；scheme 为 auth；认证代理,是；表内为「方案 A」「认证代理」；无「认证托管」,否,建议，批准：认证托管,是
+方案B（透明透传）,透明透传；配置键 scheme 取值 transparent,配置：conf.json 与 proxy_users.json,方案 B；scheme 为 transparent；透明代理,是；表内为「方案 B」「透明代理」；无「透明透传」,否,建议，批准：透明透传,是
+P1,客户端到网关的传输加密；配置键 tls_termination 与 tls_p1_*,配置：监听与安全策略,P1；客户端侧 TLS,是,否,建议，批准：客户端到网关的传输加密,是
+P2,网关到数据库的传输加密；配置键 backend_ssl_mode 与 tls_p2_*,配置：监听与安全策略,P2；后端侧 TLS,是,否,建议，批准：网关到数据库的传输加密,是
+ENC2,密文格式 ENC2,配置：密码用 ENC2,ENC2:；AES-256-GCM,是,否,建议，批准：密文格式 ENC2,是
+热重载,热重载；命令 reload,运维：可以热重载的项,reload；热更；热加载,是；说明句中有「热重载」「热更」,否,建议，批准：热重载,是
+熔断,熔断；配置段 circuit_breaker,配置：监听与安全策略；运维：故障时先看什么,熔断器；circuit_breaker,是,否,建议，批准：熔断,是
+多后端写广播,多后端同时接收写操作；配置键 mode.strategy 取值 dispatch,配置：监听与安全策略,多后端写广播；strategy 为 dispatch,否；表内有「统一监听口多后端写」和「广播 / Dispatch」,否,建议，批准：名称为多后端写广播；名词解释为：多后端同时接收写操作,是
+shadow,同时接收写操作的其余后端；正文不写 shadow,配置：监听与安全策略,shadow；影子后端,是,否,建议，批准：名称为：影子后端；名词解释：除了主后端外，同时接收写操作的其余后端,是
+dispatch,配置值 dispatch；表示多后端同时接收写操作,配置：监听与安全策略,dispatch；分发模式,是,否,建议，批准：名称：广播；名词解释：多后端同时接收写操作,是
+drain,命令 drain；停止把新连接送到指定后端；已有连接自然结束,运维：启动与停止,drain；排水,是,否,"建议，批准：名称：排空；名词解释：停止向指定后端送新连接,已有连接自然结束. 市场名称：优雅下线",是
+SQL 防火墙,SQL 防火墙；配置键 sql_firewall_enabled,配置：监听与安全策略；运维：故障时先看什么,SQL 防火墙,是,否,建议，批准：SQL 防火墙,是
+安全信息与事件管理（SIEM）,安全信息与事件管理（SIEM）,运维：可以热重载的项,SIEM 友好审计导出；SIEM 集成,否,否,建议，批准：安全信息与事件管理（SIEM）,是
+五道门,正文不用该词；安全策略写成 IP 访问控制、客户端到网关的传输加密、认证与限速、连接配额、SQL 防火墙,配置：监听与安全策略,学习稿词条为五道存活门；安全加固指南为 Layer 1 至 Layer 5；未把五道门用作层名,否；表内有「五道存活门」,否,建议，批准：名称：五层安全访问控制。名词解释：DBPrisma 网关基于纵深防御思想，按请求链路依次设置网络访问控制、传输加密、身份认证与流控、连接配额、SQL 语句防护五层检查，逐层拦截非法访问、恶意流量与危险语句，为数据库提供分层防护。市场用语：五层安全访问防线,是
+重组上限,重组上限；配置键 max_reassemble_bytes,配置：重组上限,max_reassemble_bytes；包重组上限,是；表内为「包重组上限」,否,建议，批准：名称：包重组上限。,是
+代理用户,代理用户；文件 proxy_users.json,安装：预编译包目录；配置：conf.json 与 proxy_users.json,proxy_users.json；代理用户,是；表内有 proxy_users.json；无「代理用户」四字,否,建议，批准：代理用户,是
+交互提示符,交互提示符 XR:>,安装：首次启动与核对；运维,XR:>,否,否,建议，批准：交互提示符,是
+管理接口,管理接口；配置键 admin_listen_ip 与 admin_listen_port,运维：管理接口,Admin HTTP / HTTPS,否,否,建议，批准：管理接口,是
+审计导出,审计导出；配置键 audit_export_enabled、audit_export_format、audit_export_file,运维：可以热重载的项,audit_export；SIEM 友好审计导出,否,否,建议，批准：审计导出,是
+安全策略,安全策略；配置段 security,配置：监听与安全策略,security,是；表内有 security.* 说明句,否,建议，批准：安全策略,是
+授权文件,授权文件 license.dat；未放置时默认 30 天试用,安装：首次启动与核对,license.dat；TRIAL,否,否,建议，批准：授权文件,是
+看门狗,进程守护；配置段 watchdog,配置：监听与安全策略,watchdog；看门狗,是,否,建议，批准：进程守护,是
+暂停接受新连接,命令 pause 停止接受新的客户端连接；命令 resume 恢复,运维：启动与停止,pause；resume,是,否,建议，批准：暂停接受新连接,是
