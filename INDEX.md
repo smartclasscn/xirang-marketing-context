@@ -5,6 +5,7 @@
 | 对外口径真身 | `Marketing/00-对外口径.md` |
 | 宣传母版 | `Marketing/00-宣传母版.md` |
 | 十周计划 | `Marketing/宣传计划.md` |
+| DBPrisma 技术负责人事实澄清与修订记录（2026-11-22） | 公司文档/分析文件/DBPrisma/00-产品能力地图/2026-11-22-技术负责人事实澄清与修订记录.md |
 | DBPrisma 产品能力地图 V1.0 | `公司文档/分析文件/DBPrisma/00-产品能力地图/DBPrisma-产品能力地图-V1.0.md` |
 | DBPrisma 场景—角色—价值矩阵 V1.0 | `公司文档/分析文件/DBPrisma/01-场景角色价值/DBPrisma-场景角色价值矩阵-V1.0.md` |
 | DBPrisma 内容体系建设方案 V1.0 | `公司文档/分析文件/DBPrisma/02-内容体系/00-内容体系建设方案-V1.0.md` |
